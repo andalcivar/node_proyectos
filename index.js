@@ -26,7 +26,7 @@ app.use(cors());
 app.use( express.json ({ extended: true}));
  
 // crear puerto de la app
-const port '0.0.0.0',= process.env.port '0.0.0.0', || 4000;
+const port = process.env.port  || 4000; 
 
 // definir la pagina principal 
 // verifica que el servidor esta corriendo correctamente
