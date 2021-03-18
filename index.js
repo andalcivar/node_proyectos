@@ -22,18 +22,15 @@ conectarDB();
 // habilita cors
 //app.use(cors(  { credentials: true, origin: 'https://desolate-plains-36017.herokuapp.com/' } ));
 //app.use(cors({origin: 'https://desolate-plains-36017.herokuapp.com'}));
-app.use(cors());
-
-var corsOptions = {
-    origin: 'https://desolate-plains-36017.herokuapp.com/',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
+//app.use(cors());
+app.use(cors({ credentials: true, origin: true }));
+app.options("*", cors())
 
 //habilitar express.json
 app.use( express.json ({ extended: true}));
  
 // crear puerto de la app
-const port = process.env.port  || 4000; 
+const port = process.env.PORT  || 4000; 
 
 // definir la pagina principal 
 // verifica que el servidor esta corriendo correctamente
