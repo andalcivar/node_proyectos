@@ -21,8 +21,8 @@ conectarDB();
 
 // habilita cors
 //app.use(cors(  { credentials: true, origin: 'https://desolate-plains-36017.herokuapp.com/' } ));
-app.use(cors({origin: 'https://desolate-plains-36017.herokuapp.com'}));
-
+//app.use(cors({origin: 'https://desolate-plains-36017.herokuapp.com'}));
+app.use(cors());
 
 var corsOptions = {
     origin: 'https://desolate-plains-36017.herokuapp.com/',
