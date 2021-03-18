@@ -20,7 +20,9 @@ const app = express();
 conectarDB();
 
 // habilita cors
+//app.use(cors(  { credentials: true, origin: 'https://desolate-plains-36017.herokuapp.com/' } ));
 app.use(cors());
+
 
 //habilitar express.json
 app.use( express.json ({ extended: true}));
@@ -43,5 +45,5 @@ app.use('/api/tareas', require('./routes/tareas') );
 
 // arrancar la app
 app.listen(port,'0.0.0.0',() =>{
-    console.log(`el servidor esta funcionando en el puerto ${port}` )
+    console.log(`Nota: el servidor esta funcionando en el puerto ${port}` )
 });
