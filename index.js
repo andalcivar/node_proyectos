@@ -24,6 +24,11 @@ conectarDB();
 app.use(cors());
 
 
+var corsOptions = {
+    origin: 'https://desolate-plains-36017.herokuapp.com/',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+
 //habilitar express.json
 app.use( express.json ({ extended: true}));
  
